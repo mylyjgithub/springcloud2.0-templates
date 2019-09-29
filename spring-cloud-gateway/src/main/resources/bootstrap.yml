@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring:
+  application:
+    name: gateway
+  cloud:
+      config:
+        uri: http://localhost:58004/        #Config server的uri
+        profile: dev                       #指定的环境
+        label: master                       #指定分支

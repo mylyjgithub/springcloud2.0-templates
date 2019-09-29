@@ -1,0 +1,14 @@
+server:
+  port: 58003
+spring:
+  application:
+    name: feign
+  cloud:
+      config:
+        uri: http://localhost:58004/        #Config server的uri
+        profile: dev                       #指定的环境
+        label: master                      #指定分支
+#此属性必须开启，否则不生效
+feign:
+  hystrix:
+    enabled: true

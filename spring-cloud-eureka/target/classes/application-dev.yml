@@ -1,0 +1,7 @@
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://ekserver:58000/eureka/

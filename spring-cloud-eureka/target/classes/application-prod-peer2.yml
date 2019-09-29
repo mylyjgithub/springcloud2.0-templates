@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    hostname: ek-peer2
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://ek-peer2:58000/eureka/
+  server:
+    enable-self-preservation: false

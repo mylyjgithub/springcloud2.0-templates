@@ -1,0 +1,11 @@
+server:
+  port: 58000
+spring:
+  profiles:
+    active: dev
+  application:
+    name: eureka
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
