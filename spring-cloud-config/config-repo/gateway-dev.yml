@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: hello-service
+          uri: lb://hello-service
+          predicates:
+          - Path=/hello-service/**
+          filters:
+          - StripPrefix=1
+        - id: feign
+          uri: lb://feign
+          predicates:
+          - Path=/feign/**
+          filters:
+          - StripPrefix=1 # 比如，请求/name/bar/foo，去除掉前面两个前缀之后，最后转发到目标服务的路径为/foo
+#             - name: Hystrix
+#                args:
+#                  name: fallbackcmd
+#                  fallbackUri: forward:/fallback
+        - id: ribbon
+          uri: lb://ribbon
+          predicates:
+          - Path=/ribbon/**
+          filters:
+          - StripPrefix=1
+        - id: config
+          uri: lb://config
+          predicates:
+          - Path=/config/**
+          filters:
+          - StripPrefix=1

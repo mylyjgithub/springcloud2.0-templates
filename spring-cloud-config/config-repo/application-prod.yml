@@ -1,0 +1,6 @@
+swagger:
+  enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ek-peer1:58000/eureka/,http://ek-peer2:58000/eureka/

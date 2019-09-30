@@ -1,0 +1,7 @@
+swagger:
+  enabled: true
+  package: com.centerm.spring.cloud
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ekserver:58000/eureka/

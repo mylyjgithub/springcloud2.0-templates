@@ -1,0 +1,16 @@
+server:
+  port: 58004
+spring:
+  profiles:
+    active: dev
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xxxxx/spring-cloud-config
+          search-paths: config-repo
+          username: your account
+          password: your pwd
+          default-label: master
